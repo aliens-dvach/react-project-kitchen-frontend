@@ -1,9 +1,9 @@
-import ArticleActions from './ArticleActions';
-import { Link } from 'react-router-dom';
-import React from 'react';
+import { Link } from "react-router-dom";
+import React from "react";
+import ArticleActions from "./ArticleActions";
 
-const ArticleMeta = props => {
-  const article = props.article;
+const ArticleMeta = (props) => {
+  const { article } = props;
   return (
     <div className="article-meta">
       <Link to={`/@${article.author.username}`}>

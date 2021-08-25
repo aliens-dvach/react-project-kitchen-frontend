@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const LoggedOutView = props => {
+const LoggedOutView = (props) => {
   if (!props.currentUser) {
     return (
       <ul className="nav navbar-nav pull-xs-right">
-
         <li className="nav-item">
           <Link to="/" className="nav-link">
             Home
@@ -23,18 +22,16 @@ const LoggedOutView = props => {
             Sign up
           </Link>
         </li>
-
       </ul>
     );
   }
   return null;
 };
 
-const LoggedInView = props => {
+const LoggedInView = (props) => {
   if (props.currentUser) {
     return (
       <ul className="nav navbar-nav pull-xs-right">
-
         <li className="nav-item">
           <Link to="/" className="nav-link">
             Home
@@ -43,24 +40,23 @@ const LoggedInView = props => {
 
         <li className="nav-item">
           <Link to="/editor" className="nav-link">
-            <i className="ion-compose"></i>&nbsp;New Post
+            <i className="ion-compose" />
+            &nbsp;New Post
           </Link>
         </li>
 
         <li className="nav-item">
           <Link to="/settings" className="nav-link">
-            <i className="ion-gear-a"></i>&nbsp;Settings
+            <i className="ion-gear-a" />
+            &nbsp;Settings
           </Link>
         </li>
 
         <li className="nav-item">
-          <Link
-            to={`/@${props.currentUser.username}`}
-            className="nav-link">
+          <Link to={`/@${props.currentUser.username}`} className="nav-link">
             <span>Hello, {props.currentUser.username}</span>
           </Link>
         </li>
-
       </ul>
     );
   }
@@ -73,7 +69,6 @@ class Header extends React.Component {
     return (
       <nav className="navbar navbar-light">
         <div className="container">
-
           <Link to="/" className="navbar-brand">
             {this.props.appName.toLowerCase()}
           </Link>
