@@ -1,3 +1,5 @@
+[![Build Status](https://app.travis-ci.com/aliens-dvach/react-project-kitchen-frontend.svg?branch=main)](https://app.travis-ci.com/aliens-dvach/react-project-kitchen-frontend)
+
 # Проектная кухня
 
 Так мы называем коллективную работу над проектом, проходящую параллельно с курсом по React в Яндекс.Практикуме. По желанию студенты делятся на команды и переделывают несложное приложение на React и Redux. Это закрепляет навыки кодинга и тренирует навыки коллективной работы.
