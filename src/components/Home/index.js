@@ -1,5 +1,7 @@
 import Banner from './Banner';
-import React from 'react';
+import MainView from './MainView';
+import Tags from './Tags';
+import React, { useEffect } from 'react';
 import agent from '../../agent';
 import { connect } from 'react-redux';
 import {
@@ -7,9 +9,6 @@ import {
   HOME_PAGE_UNLOADED,
   APPLY_TAG_FILTER
 } from '../../constants/actionTypes';
-
-// YOU WILL DELETE NEXT LINE SOON
-import ToDelete from './ToDelete';
 
 const Promise = global.Promise;
 
@@ -28,50 +27,44 @@ const mapDispatchToProps = dispatch => ({
     dispatch({  type: HOME_PAGE_UNLOADED })
 });
 
-class Home extends React.Component {
-  componentWillMount() {
-    const tab = this.props.token ? 'feed' : 'all';
-    const articlesPromise = this.props.token ?
+function Home(props) {
+
+  useEffect(() => {
+    const tab = props.token ? 'feed' : 'all';
+    const articlesPromise = props.token ?
       agent.Articles.feed :
       agent.Articles.all;
 
-    this.props.onLoad(tab, articlesPromise, Promise.all([agent.Tags.getAll(), articlesPromise()]));
-  }
+    props.onLoad(tab, articlesPromise, Promise.all([agent.Tags.getAll(), articlesPromise()]));
 
-  componentWillUnmount() {
-    this.props.onUnload();
-  }
+    return props.onUnload();
+  }, [])
 
-  render() {
-    return (
-      <div className="home-page">
+  return (
+    <div className="home-page">
 
-        <Banner token={this.props.token} appName={this.props.appName} />
-        <div className="container page">
+      <Banner token={props.token} appName={props.appName} />
+      <div className="container page">
+        <div className="row">
+          <MainView />
 
-          {/* THIS COMPONENT WILL BE DELETED THIS IS WELCOME */}
-          <ToDelete />
+          <div className="col-md-3">
+            <div className="sidebar">
 
-          {/* <div className="row">
-            <MainView />
+              <p>Popular Tags</p>
 
-            <div className="col-md-3">
-              <div className="sidebar">
+              <Tags
+                tags={props.tags}
+                onClickTag={props.onClickTag} />
 
-                <p>Popular Tags</p>
-
-                <Tags
-                  tags={this.props.tags}
-                  onClickTag={this.props.onClickTag} />
-
-              </div>
             </div>
-          </div> */}
+          </div>
         </div>
-
       </div>
-    );
-  }
+
+    </div>
+  );
+
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Home);
