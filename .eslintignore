@@ -40,6 +40,6 @@ build
 /src/reducers/settings.js
 
 /src/agent.js
+/src/index.js
 /src/middleware.js
 /src/reducer.js
-/src/store.js

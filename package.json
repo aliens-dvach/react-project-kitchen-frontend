@@ -5,6 +5,7 @@
   "private": true,
   "devDependencies": {
     "cross-env": "^5.1.4",
+    "editorconfig-checker": "^4.0.2",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-plugin-import": "^2.24.2",
@@ -12,6 +13,7 @@
     "eslint-plugin-react": "^7.24.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "react-scripts": "1.1.1",
+    "stylelint": "^8.4.0",
     "stylelint-config-airbnb": "0.0.0"
   },
   "dependencies": {
@@ -35,6 +37,9 @@
     "build": "react-scripts build",
     "test": "cross-env PORT=4100 react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
-    "lint": "eslint --ext .jsx --ext .js src/"
+    "eslint": "eslint --ext .jsx --ext .js src/",
+    "editorconfig": "editorconfig-checker --exclude '.git|node_modules|.DS_Store|build|public'",
+    "stylelint": "stylelint 'src/**/*.css'",
+    "lint": "npm run eslint & npm stylelint & npm run editorconfig"
   }
 }
