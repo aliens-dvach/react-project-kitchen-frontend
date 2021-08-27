@@ -30,16 +30,7 @@ build
 /src/components/Settings.js
 
 /src/constants/actionTypes.js
-/src/reducers/article.js
-/src/reducers/articleList.js
-/src/reducers/auth.js
-/src/reducers/common.js
-/src/reducers/editor.js
-/src/reducers/home.js
-/src/reducers/profile.js
-/src/reducers/settings.js
 
 /src/agent.js
 /src/index.js
 /src/middleware.js
-/src/reducer.js
