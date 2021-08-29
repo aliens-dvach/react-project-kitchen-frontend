@@ -11,22 +11,27 @@ export default function AppRouter() {
     <Switch>
       {publicRouters.map((route) => (
         <Route
+          key={route.path}
           path={route.path}
           component={route.component}
           exact={route.exact}
         />
       ))}
-      {isAuth ? privateRouters.map((route) => (
+      {isAuth ? (
         <React.Fragment>
-          <Route
-            path={route.path}
-            component={route.component}
-            exact={route.exact}
-          />
+          {privateRouters.map((route) => (
+
+            <Route
+              key={route.path}
+              path={route.path}
+              component={route.component}
+              exact={route.exact}
+            />
+
+          ))}
           <Redirect to="/login" />
         </React.Fragment>
-
-      )) : null}
+      ) : null}
     </Switch>
   );
 }
