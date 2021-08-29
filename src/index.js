@@ -5,7 +5,7 @@ import { Route, Switch } from 'react-router-dom';
 import { ConnectedRouter } from 'react-router-redux';
 import { store, history } from './store';
 
-import App from './components/App';
+import App from './components/App/App';
 
 ReactDOM.render((
   <Provider store={store}>
