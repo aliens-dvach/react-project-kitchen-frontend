@@ -21,3 +21,5 @@ export const privateRouters = [
   { path: '/editor/:slug', component: Editor, exact: false },
   { path: '/settings', component: Settings, exact: false },
 ];
+
+export default [publicRouters, privateRouters];
