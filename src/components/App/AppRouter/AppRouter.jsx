@@ -9,23 +9,26 @@ export default function AppRouter() {
 
   return (
     <Switch>
-      {publicRouters.map((route) => (
+      {publicRouters.map(({ component: Component, path, exact }) => (
         <Route
-          key={route.path}
-          path={route.path}
-          component={route.component}
-          exact={route.exact}
+          key={path}
+          path={path}
+            // eslint-disable-next-line react/jsx-props-no-spreading
+          render={(props) => <Component {...props} />}
+          exact={exact}
         />
+
       ))}
       {isAuth ? (
         <React.Fragment>
-          {privateRouters.map((route) => (
+          {privateRouters.map(({ component: Component, path, exact }) => (
 
             <Route
-              key={route.path}
-              path={route.path}
-              component={route.component}
-              exact={route.exact}
+              key={path}
+              path={path}
+              // eslint-disable-next-line react/jsx-props-no-spreading
+              render={(props) => <Component {...props} />}
+              exact={exact}
             />
 
           ))}
