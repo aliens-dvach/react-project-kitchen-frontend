@@ -1,6 +1,6 @@
 import { connectRouter } from 'connected-react-router';
 import { combineReducers } from 'redux';
-import createHistory from 'history/createBrowserHistory';
+import createHistory from './history';
 import article from './reducers/article';
 import articleList from './reducers/articleList';
 import auth from './reducers/auth';
