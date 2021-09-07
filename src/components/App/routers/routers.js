@@ -3,7 +3,7 @@ import Home from '../../Home';
 import Login from '../../Login';
 import ProfileFavorites from '../../ProfileFavorites';
 import Register from '../../Register';
-import Settings from '../../Settings';
+import Settings from '../../Settings/Settings';
 import ProfileDefault from '../../Profile';
 import Article from '../../Article';
 
