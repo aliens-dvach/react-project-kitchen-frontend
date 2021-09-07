@@ -1,5 +1,4 @@
-/* eslint-disable import/prefer-default-export */
-import Editor from '../../Editor';
+import Editor from '../../Editor/Editor';
 import Home from '../../Home';
 import Login from '../../Login';
 import ProfileFavorites from '../../ProfileFavorites';
@@ -21,5 +20,3 @@ export const privateRouters = [
   { path: '/editor/:slug', component: Editor, exact: false },
   { path: '/settings', component: Settings, exact: false },
 ];
-
-export default [publicRouters, privateRouters];
