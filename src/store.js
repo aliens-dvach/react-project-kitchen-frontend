@@ -1,10 +1,10 @@
-import { routerMiddleware } from "connected-react-router";
-import createHistory from "history/createBrowserHistory";
-import { applyMiddleware, createStore } from "redux";
-import { createLogger } from "redux-logger";
-import { composeWithDevTools } from "redux-devtools-extension/developmentOnly";
-import { promiseMiddleware, localStorageMiddleware } from "./middleware";
-import reducer from "./reducer";
+import { routerMiddleware } from 'connected-react-router';
+import { applyMiddleware, createStore } from 'redux';
+import { createLogger } from 'redux-logger';
+import { composeWithDevTools } from 'redux-devtools-extension/developmentOnly';
+import { promiseMiddleware, localStorageMiddleware } from './middleware';
+import reducer from './reducer';
+import createHistory from './history';
 
 export const history = createHistory();
 
@@ -12,11 +12,11 @@ export const history = createHistory();
 const myRouterMiddleware = routerMiddleware(history);
 
 const getMiddleware = () => {
-  if (process.env.NODE_ENV === "production") {
+  if (process.env.NODE_ENV === 'production') {
     return applyMiddleware(
       myRouterMiddleware,
       promiseMiddleware,
-      localStorageMiddleware
+      localStorageMiddleware,
     );
   }
 
@@ -25,7 +25,7 @@ const getMiddleware = () => {
     myRouterMiddleware,
     promiseMiddleware,
     localStorageMiddleware,
-    createLogger()
+    createLogger(),
   );
 };
 
