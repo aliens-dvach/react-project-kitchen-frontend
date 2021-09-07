@@ -1,14 +1,19 @@
 import React from 'react';
-import Header from '../Header';
+import PropTypes from 'prop-types';
+
+import Header from '../Header/Header';
 import AppRouter from './AppRouter/AppRouter';
-import { useInitialApp } from './Hooks/useInitialApp';
+import { initialStateTypes, useInitialApp } from './Hooks/useInitialApp';
 
 function App() {
+  const propsInitialApp = useInitialApp();
+  PropTypes.checkPropTypes(initialStateTypes, propsInitialApp, 'props', 'app');
+
   const {
     appName,
     currentUser,
     appLoaded,
-  } = useInitialApp();
+  } = propsInitialApp;
 
   return (
     <div>
