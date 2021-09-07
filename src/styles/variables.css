@@ -1,0 +1,24 @@
+:root {
+  --basic-font-family: "JetBrains Mono", "Arial", sans-serif;
+  --exo-font-family: "Exo 2 Bold", "Arial", sans-serif;
+  --black-color-primary-background: #131316;
+  --black-color-elements-background: #1c1c21;
+  --gray-color: #2f2f37;
+  --blue-color: #4c4cff;
+  --red-color: #f20d33;
+  --powder-blue-color: #0cc;
+  --disabled-button-color: #3a3a55;
+  --light-purple-color-text: #8585ad;
+  --white-color-text: #f2f2f3;
+  --white-text-blue-shadow:
+    0 0 16px rgba(51, 51, 255, 0.25),
+    0 0 8px rgba(51, 51, 255, 0.25),
+    0 4px 32px rgba(51, 51, 255, 0.5);
+  --basic-border-radius: 20px;
+  --h1-font-size: 64px;
+  --h1-line-height: 64px;
+  --h2-font-size: 24px;
+  --h2-line-height: 28px;
+  --p-font-size: 16px;
+  --p-line-height: 24px;
+}

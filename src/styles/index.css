@@ -1,0 +1,35 @@
+@import url("../vendor/normalize.css");
+@import url("../fonts/fonts.css");
+@import url("../styles/variables.css");
+
+body {
+  font-family: var(--basic-font-family);
+  background-color: var(--black-color-primary-background);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+h1 {
+  font-family: var(--exo-font-family);
+  font-size: var(--h1-font-size);
+  line-height: var(--h1-line-height);
+  color: var(--white-color-text);
+  text-shadow: var(--white-text-blue-shadow);
+  margin: 0;
+}
+
+h2 {
+  font-family: var(--exo-font-family);
+  font-size: var(--h2-font-size);
+  line-height: var(--h2-line-height);
+  color: var(--white-color-text);
+  margin: 0;
+}
+
+p {
+  font-size: var(--p-font-size);
+  line-height: var(--p-line-height);
+  color: var(--light-purple-color-text);
+  margin: 0;
+}
