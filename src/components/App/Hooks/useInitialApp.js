@@ -15,7 +15,7 @@ export const currentUserTypes = PropTypes.shape({
 
 export const initialStateTypes = {
   appName: PropTypes.string.isRequired,
-  currentUser: PropTypes.oneOfType([currentUserTypes, null]).isRequired,
+  currentUser: PropTypes.oneOfType([currentUserTypes]),
   appLoaded: PropTypes.bool,
 };
 

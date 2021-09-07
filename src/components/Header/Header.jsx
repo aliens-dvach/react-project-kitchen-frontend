@@ -21,7 +21,11 @@ function Header({ appName, currentUser }) {
 
 export default Header;
 
+Header.defaultProps = {
+  currentUser: undefined,
+};
+
 Header.propTypes = {
   appName: PropTypes.string.isRequired,
-  currentUser: PropTypes.oneOfType([currentUserTypes, null]).isRequired,
+  currentUser: PropTypes.oneOfType([currentUserTypes]),
 };

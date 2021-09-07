@@ -61,6 +61,9 @@ function TopMenu({ currentUser }) {
 
 export default TopMenu;
 
+TopMenu.defaultProps = {
+  currentUser: undefined,
+};
 TopMenu.propTypes = {
-  currentUser: PropTypes.oneOfType([currentUserTypes, null]).isRequired,
+  currentUser: PropTypes.oneOfType([currentUserTypes]),
 };
