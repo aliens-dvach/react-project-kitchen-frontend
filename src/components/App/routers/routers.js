@@ -18,5 +18,6 @@ export const publicRouters = [
 
 export const privateRouters = [
   { path: '/editor/:slug', component: Editor, exact: false },
+  { path: '/editor', component: Editor, exact: false },
   { path: '/settings', component: Settings, exact: false },
 ];
