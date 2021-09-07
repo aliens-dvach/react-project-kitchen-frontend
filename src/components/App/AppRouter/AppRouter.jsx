@@ -1,4 +1,3 @@
-/* eslint-disable react/jsx-fragments */
 import React from 'react';
 import { Redirect, Route, Switch } from 'react-router-dom';
 import { privateRouters, publicRouters } from '../routers/routers';
@@ -20,7 +19,7 @@ export default function AppRouter() {
 
       ))}
       {isAuth ? (
-        <React.Fragment>
+        <>
           {privateRouters.map(({ component: Component, path, exact }) => (
 
             <Route
@@ -33,7 +32,7 @@ export default function AppRouter() {
 
           ))}
           <Redirect to="/login" />
-        </React.Fragment>
+        </>
       ) : null}
     </Switch>
   );
