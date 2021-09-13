@@ -11,14 +11,14 @@
   --light-purple-color-text: #8585ad;
   --white-color-text: #f2f2f3;
   --white-text-blue-shadow:
-    0 0 16px rgba(51, 51, 255, 0.25),
-    0 0 8px rgba(51, 51, 255, 0.25),
-    0 4px 32px rgba(51, 51, 255, 0.5);
+    0 0 1rem rgba(51, 51, 255, 0.25),
+    0 0 0.5rem rgba(51, 51, 255, 0.25),
+    0 0.25rem 2rem rgba(51, 51, 255, 0.5);
   --basic-border-radius: 20px;
-  --h1-font-size: 64px;
-  --h1-line-height: 64px;
-  --h2-font-size: 24px;
-  --h2-line-height: 28px;
-  --p-font-size: 16px;
-  --p-line-height: 24px;
+  --h1-font-size: 4rem;
+  --h1-line-height: 4rem;
+  --h2-font-size: 1.5rem;
+  --h2-line-height: 1.75rem;
+  --p-font-size: 1rem;
+  --p-line-height: 1.5rem;
 }
