@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 
 const Banner = ({ appName, token }) => {
   if (token) {
@@ -14,6 +15,11 @@ const Banner = ({ appName, token }) => {
       </div>
     </div>
   );
+};
+
+Banner.propTypes = {
+  appName: PropTypes.string.isRequired,
+  token: PropTypes.string.isRequired,
 };
 
 export default Banner;
